@@ -17,9 +17,9 @@ Time spent: `26 hours
   - [X] After 60 pts, the later icon should start moving with the translation and the background should change to yellow.
     - [X] Upon release, the message should continue to reveal the yellow background. When the animation it complete, it should show the reschedule options.
   - [X] After 260 pts, the icon should change to the list icon and the background color should change to brown.
-    - [ ] Upon release, the message should continue to reveal the brown background. When the animation it complete, it should show the list options.
+    - [x] Upon release, the message should continue to reveal the brown background. When the animation it complete, it should show the list options.
 
-- [ ] User can tap to dismiss the reschedule or list options. After the reschedule or list options are dismissed, you should see the message finish the hide animation.
+- [x] User can tap to dismiss the reschedule or list options. After the reschedule or list options are dismissed, you should see the message finish the hide animation.
 - [X] On dragging the message right:
   - [X] Initially, the revealed background color should be gray.
   - [X] As the archive icon is revealed, it should start semi-transparent and become fully opaque. If released at this point, the message should return to its initial position.
