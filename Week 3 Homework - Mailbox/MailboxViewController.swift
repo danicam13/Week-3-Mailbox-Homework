@@ -118,9 +118,9 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
                 messageParentView.alpha = 0
                 rescheduleScreen.alpha = 0
                 
-                if translation.x < -300 {
-                    messageParentView.alpha = 0
-                    rescheduleScreen.alpha = 1
+            if translation.x < -300 {
+                messageParentView.alpha = 0
+                rescheduleScreen.alpha = 1
                     
                 }
             }
