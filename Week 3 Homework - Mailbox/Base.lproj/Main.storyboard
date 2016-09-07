@@ -68,6 +68,19 @@
                                         <rect key="frame" x="316" y="0.0" width="320" height="567"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="archive_nav_icon" id="dwc-qX-c2b">
+                                        <rect key="frame" x="115" y="23" width="25" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="mail_nav_icon" id="Tz7-6r-hPl">
+                                        <rect key="frame" x="148" y="23" width="25" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" red="0.22417680370000001" green="0.34508703860000001" blue="0.59461514260000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="later_nav_icon" id="ibx-Xu-Qx7">
+                                        <rect key="frame" x="181" y="23" width="25" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -77,6 +90,7 @@
                         <outlet property="archiveIcon" destination="xXE-CB-gaJ" id="Ti6-fb-GiR"/>
                         <outlet property="deleteIcon" destination="UhI-uG-ugR" id="ovF-y0-OdR"/>
                         <outlet property="laterIcon" destination="3QO-mf-45F" id="Tck-yr-OV8"/>
+                        <outlet property="messageFeed" destination="GVI-te-iBU" id="dMw-pN-dbN"/>
                         <outlet property="messageParentView" destination="tft-ds-fhT" id="Ix9-eN-sMW"/>
                         <outlet property="rescheduleScreen" destination="a5p-M9-DCy" id="E55-ZO-gD3"/>
                         <outlet property="scrollView" destination="kBY-8R-MCg" id="xWF-Ya-82n"/>
@@ -100,10 +114,13 @@
     </scenes>
     <resources>
         <image name="archive_icon" width="25" height="25"/>
+        <image name="archive_nav_icon" width="25" height="20"/>
         <image name="delete_icon" width="25" height="25"/>
         <image name="feed" width="320" height="1202"/>
         <image name="help_label" width="320" height="37"/>
         <image name="later_icon" width="25" height="25"/>
+        <image name="later_nav_icon" width="25" height="20"/>
+        <image name="mail_nav_icon" width="25" height="20"/>
         <image name="message" width="320" height="86"/>
         <image name="nav" width="320" height="65"/>
         <image name="reschedule" width="320" height="568"/>

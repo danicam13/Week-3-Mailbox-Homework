@@ -17,11 +17,14 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var laterIcon: UIImageView!
     @IBOutlet weak var deleteIcon: UIImageView!
     @IBOutlet weak var rescheduleScreen: UIImageView!
+    @IBOutlet weak var messageFeed: UIImageView!
     
     var initialCenter: CGPoint!
     var initialLater: CGPoint!
     var initialDelete: CGPoint!
     var initialArchive: CGPoint!
+    var initialFeed: CGPoint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +73,7 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
             initialArchive = archiveIcon.center
             initialLater = laterIcon.center
             initialDelete = deleteIcon.center
+            initialFeed = messageFeed.center
             messageParentView.backgroundColor = UIColor.grayColor()
             
         } else if   sender.state == UIGestureRecognizerState.Changed {
@@ -106,30 +110,34 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
                 archiveIcon.alpha = 0
                 deleteIcon.alpha = 0
                 laterIcon.alpha = 1
+                print("hi")
             }
             
         } else if   sender.state == UIGestureRecognizerState.Ended {
-            singleMessage.center = initialCenter
-            archiveIcon.center = initialArchive
-            deleteIcon.center = initialDelete
-            laterIcon.center = initialLater
-        
-            if translation.x > 300 {
+            if singleMessage.center.x > 270 {
                 messageParentView.alpha = 0
                 rescheduleScreen.alpha = 0
-                
-            if translation.x < -300 {
+                messageFeed.center = CGPoint(x:
+                    initialFeed.x, y:
+                    initialFeed.y - 88)}
+            
+            else if singleMessage.center.x < -260 {
                 messageParentView.alpha = 0
                 rescheduleScreen.alpha = 1
+                print("i want to be done")
+                
+            singleMessage.center = initialCenter
+            archiveIcon.center = initialArchive
+            print("yes")
+            deleteIcon.center = initialDelete
+            laterIcon.center = initialLater
+                
+            
                     
                 }
             }
             
         }
-        
-//        if translation.x > 40 {
-//            messageParentView.alpha = 0
-//        }
         
         }
 
@@ -168,5 +176,3 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
-    }
