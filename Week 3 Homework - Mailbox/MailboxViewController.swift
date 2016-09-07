@@ -17,7 +17,10 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var laterIcon: UIImageView!
     @IBOutlet weak var deleteIcon: UIImageView!
     
-    var  initialCenter = CGPoint()
+    var initialCenter = CGPoint()
+    var initialLater = CGPoint ()
+    var initialDelete = CGPoint ()
+    var initialArchive = CGPoint ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,13 +66,16 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
         
         if  sender.state == UIGestureRecognizerState.Began {
             initialCenter = singleMessage.center
+            initialArchive = archiveIcon.center
+            initialLater = laterIcon.center
+            initialDelete = deleteIcon.center
             messageParentView.backgroundColor = UIColor.grayColor()
             
         } else if   sender.state == UIGestureRecognizerState.Changed {
             singleMessage.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y)
-            archiveIcon.center = CGPoint(x: initialCenter.x + translation.x + 100, y: initialCenter.y)
-            laterIcon.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y)
-            deleteIcon.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y)
+            archiveIcon.center = CGPoint(x: initialArchive.x + translation.x + 55, y: initialCenter.y)
+            laterIcon.center = CGPoint(x: initialLater.x + translation.x + 55, y: initialLater.y)
+            deleteIcon.center = CGPoint(x: initialDelete.x + translation.x + 55, y: initialCenter.y)
             
                 if translation.x > 60 {
                 messageParentView.backgroundColor = UIColor.greenColor()
@@ -80,15 +86,15 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
             
                 if translation.x > 260 {
                 messageParentView.backgroundColor = UIColor.redColor()
-                archiveIcon.alpha = 1
+                archiveIcon.alpha = 0
                 deleteIcon.alpha = 1
-                laterIcon.alpha = 1
+                laterIcon.alpha = 0
             }
             
             if translation.x < -60 {
                 messageParentView.backgroundColor = UIColor.yellowColor()
-                archiveIcon.alpha = 1
-                deleteIcon.alpha = 1
+                archiveIcon.alpha = 0
+                deleteIcon.alpha = 0
                 laterIcon.alpha = 1
             }
             
