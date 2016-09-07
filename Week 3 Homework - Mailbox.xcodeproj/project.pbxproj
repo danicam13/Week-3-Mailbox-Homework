@@ -14,6 +14,7 @@
 		27B5AED81D78491B0072345F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B5AED61D78491B0072345F /* LaunchScreen.storyboard */; };
 		27B5AEE31D78491B0072345F /* Week_3_Homework___MailboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5AEE21D78491B0072345F /* Week_3_Homework___MailboxTests.swift */; };
 		27B5AEEE1D78491C0072345F /* Week_3_Homework___MailboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5AEED1D78491C0072345F /* Week_3_Homework___MailboxUITests.swift */; };
+		27B5AEFC1D784B1C0072345F /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B5AEFB1D784B1C0072345F /* MailboxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		27B5AEE91D78491C0072345F /* Week 3 Homework - MailboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Week 3 Homework - MailboxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B5AEED1D78491C0072345F /* Week_3_Homework___MailboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Week_3_Homework___MailboxUITests.swift"; sourceTree = "<group>"; };
 		27B5AEEF1D78491C0072345F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27B5AEFB1D784B1C0072345F /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				27B5AECD1D78491B0072345F /* AppDelegate.swift */,
 				27B5AECF1D78491B0072345F /* ViewController.swift */,
 				27B5AED11D78491B0072345F /* Main.storyboard */,
+				27B5AEFB1D784B1C0072345F /* MailboxViewController.swift */,
 				27B5AED41D78491B0072345F /* Assets.xcassets */,
 				27B5AED61D78491B0072345F /* LaunchScreen.storyboard */,
 				27B5AED91D78491B0072345F /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				27B5AED01D78491B0072345F /* ViewController.swift in Sources */,
 				27B5AECE1D78491B0072345F /* AppDelegate.swift in Sources */,
+				27B5AEFC1D784B1C0072345F /* MailboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
