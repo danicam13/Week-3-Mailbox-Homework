@@ -16,11 +16,12 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var archiveIcon: UIImageView!
     @IBOutlet weak var laterIcon: UIImageView!
     @IBOutlet weak var deleteIcon: UIImageView!
+    @IBOutlet weak var rescheduleScreen: UIImageView!
     
-    var initialCenter = CGPoint()
-    var initialLater = CGPoint ()
-    var initialDelete = CGPoint ()
-    var initialArchive = CGPoint ()
+    var initialCenter: CGPoint!
+    var initialLater: CGPoint!
+    var initialDelete: CGPoint!
+    var initialArchive: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +74,10 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
             
         } else if   sender.state == UIGestureRecognizerState.Changed {
             singleMessage.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y)
-            archiveIcon.center = CGPoint(x: initialArchive.x + translation.x + 55, y: initialCenter.y)
-            laterIcon.center = CGPoint(x: initialLater.x + translation.x + 55, y: initialLater.y)
-            deleteIcon.center = CGPoint(x: initialDelete.x + translation.x + 55, y: initialCenter.y)
+            archiveIcon.center = CGPoint(x: initialArchive.x + translation.x - 30, y: initialCenter.y)
+            laterIcon.center = CGPoint(x: initialLater.x + translation.x + 10, y: initialLater.y)
+            deleteIcon.center = CGPoint(x: initialDelete.x + translation.x - 10, y: initialCenter.y)
+            deleteIcon.alpha = 0
             
                 if translation.x > 60 {
                 messageParentView.backgroundColor = UIColor.greenColor()
@@ -98,9 +100,31 @@ class MailboxViewController: UIViewController, UIScrollViewDelegate {
                 laterIcon.alpha = 1
             }
             
+            
+            if translation.x < -260 {
+                messageParentView.backgroundColor = UIColor.brownColor()
+                archiveIcon.alpha = 0
+                deleteIcon.alpha = 0
+                laterIcon.alpha = 1
+            }
+            
         } else if   sender.state == UIGestureRecognizerState.Ended {
             singleMessage.center = initialCenter
+            archiveIcon.center = initialArchive
+            deleteIcon.center = initialDelete
+            laterIcon.center = initialLater
         
+            if translation.x > 300 {
+                messageParentView.alpha = 0
+                rescheduleScreen.alpha = 0
+                
+                if translation.x < -300 {
+                    messageParentView.alpha = 0
+                    rescheduleScreen.alpha = 1
+                    
+                }
+            }
+            
         }
         
 //        if translation.x > 40 {

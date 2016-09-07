@@ -42,7 +42,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete_icon" id="UhI-uG-ugR">
-                                                <rect key="frame" x="446" y="29" width="25" height="25"/>
+                                                <rect key="frame" x="100" y="29" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="I74-4F-pdK">
@@ -78,6 +78,7 @@
                         <outlet property="deleteIcon" destination="UhI-uG-ugR" id="ovF-y0-OdR"/>
                         <outlet property="laterIcon" destination="3QO-mf-45F" id="Tck-yr-OV8"/>
                         <outlet property="messageParentView" destination="tft-ds-fhT" id="Ix9-eN-sMW"/>
+                        <outlet property="rescheduleScreen" destination="a5p-M9-DCy" id="E55-ZO-gD3"/>
                         <outlet property="scrollView" destination="kBY-8R-MCg" id="xWF-Ya-82n"/>
                         <outlet property="singleMessage" destination="I74-4F-pdK" id="U40-cT-8Xt"/>
                     </connections>
